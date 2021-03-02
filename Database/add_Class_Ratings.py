@@ -113,7 +113,7 @@ with open('department_Data_Current.json') as JSON_File:
             # Login
             login_Form = driver.find_elements_by_xpath("//body//div[contains(@id,'container')]//div[contains(@id,'contents')]//section[contains(@id,'main')]//form[contains(@id, 'login_form')]")[0]
             login_Form.find_elements_by_xpath("//input[contains(@name,'login')]")[0].send_keys("ssolomon")
-            login_Form.find_elements_by_xpath("//input[contains(@name,'password')]")[0].send_keys("SAMthegreat11!!")
+            login_Form.find_elements_by_xpath("//input[contains(@name,'password')]")[0].send_keys(INSERT_PASSWORD)
             login = login_Form.find_elements_by_xpath("//input[contains(@type,'submit')]")[0]
             driver.execute_script("arguments[0].click();", login)
             # Get Table Information with Class Catagories
